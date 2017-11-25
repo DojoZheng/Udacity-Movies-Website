@@ -125,6 +125,7 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youku-id="{trailer_youku_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
+    <h4>{movie_rating}</h4>
 </div>
 '''
 
@@ -143,9 +144,10 @@ def create_movie_tiles_content(movies):
 
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
-            movie_title=movie.title,
-            poster_image_url=movie.poster_image_url,
-            trailer_youku_id=movie.trailer_url
+            movie_title = movie.title,
+            poster_image_url = movie.poster_image_url,
+            trailer_youku_id = movie.trailer_url,
+            movie_rating = movie.valid_rating
         )
     return content
 
