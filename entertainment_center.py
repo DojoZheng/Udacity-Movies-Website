@@ -47,10 +47,15 @@ for movie in movies_data:
 	movie_imageUrl = movie[1]
 	movie_url = movie[2]
 	movie_rating = movie[3]
-	print(movie_name + ":" + movie_rating)
+	print (movie_name + ":" + movie_rating)
 	movies_arr.append(media.Movie(movie_name, movie_imageUrl, movie_url, movie_rating))
 
-# 
+# Test the other Pre-Defined Class Variables
+print ("\nSome Pre-Defined Variables:")
+print ("__doc__:" + media.Movie.__doc__)
+print ("__name__:" + media.Movie.__name__)
+print ("__module__:" + media.Movie.__module__)
+
 
 # open movies page in browser
 fresh_tomatoes.open_movies_page(movies_arr)
